@@ -25,7 +25,17 @@ simulation_signatures/
 └── README.md                       # You're here
 ```
 
-## Setup
+## Clone the repository
+
+If you have Git installed, run:
+```bash
+git clone https://github.com/IARCBiostat/SimulationSignatures/
+cd SimulationSignatures
+```
+
+Alternatively, you can download the ZIP file directly from GitHub and unzip it.
+
+## Set up the R environment
 
 To ensure the correct package versions, we recommend using the [`renv`](https://rstudio.github.io/renv/) environment:
 

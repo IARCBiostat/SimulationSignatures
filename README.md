@@ -1,6 +1,6 @@
-# Simulation Study: Feature Selection in the Presence of Latent Variables
+# Simulation Study: Feature Selection and Collider Bias in Causal Interpretation
 
-This repository contains the code for the simulation study presented in [**Paper Title**], evaluating feature selection strategies under different latent variable scenarios.
+This repository contains the code for the simulation study presented in **On the construction of molecular signatures of lifestyle exposures**, evaluating feature selection strategies under different latent variable scenarios.
 
 ## 📁 Repository Structure
 

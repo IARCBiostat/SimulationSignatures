@@ -9,6 +9,7 @@ BETAS  <- c(0.1, 0.2, 0.3, 0.4, 0.5)
 rhoM   <- c(0, 0.5)
 SecondLayerM <- FALSE
 
+## Toy example for testing
 # NCore <- 12
 # pM    <- 100
 # NSIM  <- 1:10

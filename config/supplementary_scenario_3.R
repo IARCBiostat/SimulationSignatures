@@ -15,7 +15,8 @@ BETAS  <- c(0.1, 0.2, 0.3, 0.4, 0.5)
 RHOLS   <- c(0, 0.5)
 
 typeCorM <- "allM"
-# 
+
+## Toy scenario for testing
 # NCore <- 2
 # pE    <- 1
 # PLRELS <- 2

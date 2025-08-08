@@ -37,8 +37,8 @@ generate.data <- function(n, pM, pMrel,
   
   # Scenarios 3-4 with second layer of metabolites related to the first
   if(SecondLayerM){
-    # Second layer is related to first layer w: unif(0.1,0.5)
-    MatBetaFirstSecondLayer <- matrix(runif(length(pSecondLayer)*length(pFirstLayer), min=0.2, max=1), nrow = length(pFirstLayer))
+    # Second layer is related to first layer w: unif(0.005,0.01)
+    MatBetaFirstSecondLayer <- matrix(runif(length(pSecondLayer)*length(pFirstLayer), min=0.005, max=0.01), nrow = length(pFirstLayer))
     # Second layer has correlation structure as defined above
     M[, pSecondLayer]       <- M[, pSecondLayer] + M[, pFirstLayer]%*% MatBetaFirstSecondLayer
   }

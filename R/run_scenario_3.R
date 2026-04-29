@@ -6,30 +6,6 @@ source("config/scenario_3.R")
 source("R/generate_data.R")
 source("R/analysis_fxns.R")
 
-AllParams  <- expand.grid(NREP, NSIM, N, BETAS, M17_latent)
-colnames(AllParams) <- c("block", "nsim", "n", "beta", "M17_latent")
-
-
-t1 <- Sys.time()
-# Need to fix from here on----
-task_id <- as.integer(Sys.getenv("SLURM_ARRAY_TASK_ID", "1"))
-task <- AllParams[task_id,]
-
-cat("Beta:", task$beta, "\n",
-    "n:", task$n, "\n",
-    "N blocks:", task$block, "\n")
-
-cat(sprintf(">>> Task %d: beta=%s, n=%s, block=%s\n",
-            task_id, task$beta, task$n, task$block))
-
-Sys.setenv(
-  OMP_NUM_THREADS = "1",
-  MKL_NUM_THREADS = "1",
-  OPENBLAS_NUM_THREADS = "1",
-  VECLIB_MAXIMUM_THREADS = "1",
-  NUMEXPR_NUM_THREADS = "1"
-)
-
 sim_res <- run_simulation(blocks = task$block, 
                           B = task$nsim, 
                           beta=task$beta, 
